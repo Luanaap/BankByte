@@ -7,8 +7,10 @@
 
   <ItemGroup>
     <None Remove="Funcionarios\" />
+    <None Remove="Sistemas\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Funcionarios\" />
+    <Folder Include="Sistemas\" />
   </ItemGroup>
 </Project>
