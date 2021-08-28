@@ -1,6 +1,6 @@
 ﻿using System;
 using BankByte.Funcionarios;
-
+using BankByte.Sistemas;
 
 namespace BankByte
 {
@@ -8,8 +8,30 @@ namespace BankByte
     {
         static void Main(string[] args)
         {
-            CalcularBonificacao();
+            //CalcularBonificacao();
+            UsarSistema();
             Console.ReadLine();
+        }
+
+        public static void UsarSistema()
+        {
+            SistemaInterno sistemaInterno = new SistemaInterno();
+
+            Diretor Roberta = new Diretor("159.753.398-04");
+            Roberta.Nome = "Roberta";
+            Roberta.Senha = "123";
+
+            GerenteDeConta Camila = new GerenteDeConta("326.985.628-89");
+            Camila.Nome = "Camila";
+            Camila.Senha = "abc";
+
+            ParceiroComercial parceiro = new ParceiroComercial();
+            parceiro.Senha = "123456";
+
+            sistemaInterno.Logar(parceiro, "123456");
+
+            sistemaInterno.Logar(Roberta, "123");
+            sistemaInterno.Logar(Camila, "abc");
         }
 
 
